@@ -6,7 +6,7 @@ import numpy as np
 import sys
 import pdb
 
-sys.path.insert(1, os.environ['CoCo'])
+sys.path.insert(1, "C:\\Users\\jonat\\OneDrive\\Documents\\Tech\\Github\\Coco\\CoCo")
 
 from core import Problem
 
