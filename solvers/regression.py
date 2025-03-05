@@ -14,8 +14,8 @@ from torch.autograd import Variable
 from torch.nn import Sigmoid
 from datetime import datetime
 
-sys.path.insert(1, os.environ['CoCo'])
-sys.path.insert(1, os.path.join(os.environ['CoCo'], 'pytorch'))
+sys.path.insert(1, os.path.join("C:\\Users\\jonat\\OneDrive\\Documents\\Tech\\Github\\Coco\\CoCo", 'pytorch'))
+sys.path.insert(1, os.path.join(os.path.join("C:\\Users\\jonat\\OneDrive\\Documents\\Tech\\Github\\Coco\\CoCo", 'pytorch'), 'pytorch'))
 
 from core import Problem, Solver 
 from pytorch.models import FFNet
@@ -189,7 +189,7 @@ class Regression(Solver):
         # weirdly need to reshape in reverse order of cvxpy variable shape
         y_guess = np.reshape(y_guess, self.y_shape[::-1]).T
 
-        prob_success, cost, optvals = False, np.Inf, None
+        prob_success, cost, optvals = False, np.inf, None
         prob_success, cost, solve_time, optvals = self.problem.solve_pinned(prob_params, y_guess, solver)
         total_time += solve_time
         return prob_success, cost, total_time, optvals

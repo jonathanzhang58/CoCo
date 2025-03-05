@@ -10,7 +10,7 @@ import torch
 
 from datetime import datetime
 
-sys.path.insert(1, os.environ['CoCo'])
+sys.path.insert(1, os.path.join("C:\\Users\\jonat\\OneDrive\\Documents\\Tech\\Github\\Coco\\CoCo", 'pytorch'))
 
 from core import Problem, Solver 
 
@@ -94,7 +94,7 @@ class KNN(Solver):
             jj = np.where(self.labels[:,0] == idx)[0][0]
             y_guesses[ii] = self.labels[jj,1:]
 
-        prob_success, cost, n_evals, optvals = False, np.Inf, len(y_guesses), None
+        prob_success, cost, n_evals, optvals = False, np.inf, len(y_guesses), None
         for ii,idx in enumerate(ind_max):
             # weirdly need to reshape in reverse order of cvxpy variable shape
             y_guess = y_guesses[ii]

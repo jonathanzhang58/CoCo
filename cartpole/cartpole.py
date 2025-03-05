@@ -252,7 +252,7 @@ class Cartpole(Problem):
         ## TODO(pculbertson): allow different sets of params to vary.
 
         # solve problem with cvxpy
-        prob_success, cost, solve_time = False, np.Inf, np.Inf
+        prob_success, cost, solve_time = False, np.inf, np.inf
         self.mlopt_prob.solve(solver=solver)
 
         solve_time = self.mlopt_prob.solver_stats.solve_time

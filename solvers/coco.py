@@ -14,8 +14,8 @@ from torch.autograd import Variable
 from torch.nn import Sigmoid
 from datetime import datetime
 
-sys.path.insert(1, os.environ['CoCo'])
-sys.path.insert(1, os.path.join(os.environ['CoCo'], 'pytorch'))
+sys.path.insert(1, "C:\\Users\\jonat\\OneDrive\\Documents\\Tech\\Github\\Coco\\CoCo")
+sys.path.insert(1, os.path.join("C:\\Users\\jonat\\OneDrive\\Documents\\Tech\\Github\\Coco\\CoCo", 'pytorch'))
 
 from core import Problem, Solver
 from pytorch.models import FFNet
@@ -209,7 +209,7 @@ class CoCo(Solver):
                     y_guesses[ii] = label[1:]
                     break
 
-        prob_success, cost, n_evals, optvals = False, np.Inf, len(y_guesses), None
+        prob_success, cost, n_evals, optvals = False, np.inf, len(y_guesses), None
         for ii,idx in enumerate(ind_max):
             y_guess = y_guesses[ii]
 
